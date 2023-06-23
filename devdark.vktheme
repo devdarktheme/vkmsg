@@ -1,0 +1,434 @@
+// is-dark = true
+//
+// variables
+//
+$is-dark:#000
+$black: #000
+$white: #fff
+$dark: #1A1E2B
+$bg: #191a1b
+$base_acc_panel_and_frame: rgba(57, 64, 80, 0.21)
+$base_color: #de6161
+$text_color: #fff
+$link_dark_blue: #335680
+$light_blue: #fff
+$light_blue_gray: #c57171
+$light_gray: #647081
+$steel_gray_300: #9ba2ac
+$text_field_base: #A6B4C8
+// $text_field is 20% of $text_field_base
+$text_field: #3a4051
+$border: #3a4051 // same as text_field (20% of base)
+$placeholder: #7d8594 // 40% of #deeeff
+$hover: #1A1E2B
+$selected: #2d3341
+$button_blue: #5A7DAC
+$selected_blue: #70A7F0
+//
+// rules
+//
+is-dark:$is-dark
+base-fg: $text_color
+base-bg: $bg
+base-icon: $base_color
+base-icon-hover: $base_color,70%
+red-icon: $base_color
+gray-icon: $base_color
+steel-gray-icon: $steel_gray_300
+gray-fg: $light_gray // deprecated
+lightgray-fg: $light_gray 
+darkgray-fg: $light_gray
+bluegray-fg: $light_gray
+blue-fg: $base_color
+search-hl-bg: $base_color,40%
+user-name-fg: $base_color
+menu-hover-bg: $hover
+hover-bg: $hover
+#if LINUX
+  ubuntu-selection-bg: rgba(239, 118, 69, 0.99)
+  ubuntu-selection-fg: $bg
+#elif WINDOWS
+  win32-window-frame: #507299
+  win32-window-title-fg: $white
+  win32-window-title-bg: $base_acc_panel_and_frame
+  win32-window-title-btn-fg: $white
+  win32-window-title-btn-hover-bg: $black,20%
+  win32-window-title-btn-active-bg: $black,25%
+  win32-window-title-closebtn-hover-bg: #EB0716
+  win32-window-title-closebtn-active-bg: #DE000F
+#endif
+link-fg: $base_color
+link-darker-fg: $base_color
+link-service-fg: #45993d
+link-underline: $base_color,25%
+link-hover-underline: $base_color,80%
+input-search-placeholder-fg: $placeholder
+input-search-bg: $text_field
+input-search-icon: $placeholder
+input-search-clear-icon: $placeholder
+input-search-clear-icon2: $placeholder
+input-bg: $text_field
+input-placeholder-fg: #9ba1ae
+input-label-fg: $base_color
+textarea-border: $border
+empty-placeholder-fg: $light_gray
+button-fg: $white
+button-bg: $base_color,38%
+button-hover-bg: $base_color,85%
+button-hover-fg: $white,92%
+button-active-bg: $base_color,70%
+button-active-fg: $white,84%
+button-spinner-fg: $white
+buttonlight-fg: $base_color
+buttonlight-bg: transparent
+buttonlight-withbg-bg: $selected
+buttonwide-fg: $white
+buttonwide-bg: $base_color
+tt-bg: $light_blue,90%
+tt-fg: $bg
+tt-arrow-icon: $light_blue,90%
+tt-audio-fg: $bg
+tt-audio-bg: $light_blue,90%
+tt-audio-arrow-icon: $light_blue,90%
+promo-tt-bg: #5A9EFF
+promo-tt-fg: #fff
+promo-tt-arrow-icon: #5A9EFF
+promo-tt-shadow: #000,32%
+layer-bg: $light_blue,15%
+layer-box-bg: $bg
+layer-box-shadow: $base_color,12%
+layer-loading-bg: $light_blue,45%
+layer-loading-spinner-bg: $light_blue
+mbox-subtitle-fg: #8f9295
+mbox-text-fg: $light_gray
+about-title-fg: $light_blue
+about-text-fg: $light_blue
+about-bullet-fg: $light_gray
+update-button-downloading-bg: $text_field
+update-button-downloading-fg: $light_blue
+update-button-progress-bg: $text_field_base,35%
+update-version-fg: $light_gray
+dialogitem-bg: $bg
+dialogitem-hover-bg: $hover
+dialogitem-selected-bg: $selected
+dialogitem-name-fg: $light_blue
+dialogitem-online-bg: #71cb50
+dialogitem-message-fg: $base_color,90%
+dialogitem-message-out-fg: $base_color
+dialogitem-selected-message-out-fg: #fff,80%
+dialogitem-selected-message-attach-fg: #fff,80%
+dialogitem-wm-gradient-stop0: $bg,0%
+dialogitem-wm-gradient-stop1: $bg
+dialogitem-wm-selected-gradient-stop0: $button_blue,0%
+dialogitem-wm-selected-gradient-stop1: $button_blue
+dialogitem-wm-icon-fg: $base_color
+// FIXME: message preview tooltip
+msgp-border: #c9cccf
+msgp-bottom-gradient-stop0: $white,0%
+msgp-bottom-gradient-stop1: $white
+dialogitem-badge-bg: $base_color
+dialogitem-badge-fg: $bg
+dialogitem-selected-badge-bg: $white
+dialogitem-selected-badge-fg: $base_color
+dialogitem-outbadge-bg: $base_color
+dialogitem-outbadge-fg: $light_blue
+dialogitem-muted-badge-bg: #8995AE
+dialogitem-selected-verified-icon: $white
+dialogitem-muted-icon: $light_blue,30%
+dialogitem-delete-icon: $base_color
+dialogitem-delete-icon-active: $base_color
+dialogitem-selected-delete-icon: $light_blue
+dialogitem-selected-delete-icon-hover: $light_blue,70%
+dialogitem-selected-muted-icon: $light_blue
+dialogitem-important-icon: $light_blue,30%
+dialogitem-sending-icon: $base_color
+dialogitem-selected-sending-icon: $light_blue
+header-border: $border
+header-title: $light_blue
+header-back-fg: $base_color
+header-back-icon: $base_color
+header-remove-selection-icon: $base_color
+left-border: $text_field
+left-empty-title-fg: $light_gray
+right-big-text-fg: $light_blue_gray // forward, dnd
+left-empty-text-fg: $light_gray
+info-icon: $base_color
+info-subtitle-fg: $light_blue
+info-name-edit-icon: $base_color
+info-name-edit-icon-hover: $base_color,65%
+info-name-input-border-bottom: $border
+info-chat-image-overlay-bg: $black,50%
+info-chat-image-placeholder-bg: $text_field
+info-chat-image-placeholder-border: $text_field
+info-chat-image-placeholder-icon: #a5b4c5
+info-chat-image-change-icon: $white
+info-list-item-hover-bg: $hover
+info-list-leave-fg: $base_color
+info-list-return-fg: #309648
+info-attaches-select-arrow-icon: $light_gray
+info-attaches-select-active-arrow-icon: $light_gray
+info-attaches-empty-placeholder-fg: $light_gray
+info-attaches-link-letter-bg: $text_field
+info-attaches-link-letter-fg: $light_blue
+dialog-input-bg: $bg
+dialog-input-ta-bg: $text_field
+dialog-input-ta-border: $bg
+dialog-input-ta-empty-fg: $placeholder
+dialog-input-audio-rec-playpause-icon: $light_blue
+dialog-input-audio-wave-bg: $text_field
+dialog-input-attaches-shadow: $black,40% // inner shadow after scrolling
+dialog-input-attach-remove-bg: $white,50%
+dialog-input-attach-remove-hover-bg: $white,70%
+dialog-input-attach-remove-icon: $bg
+dialog-input-attach-bg: $text_field
+dialog-input-attach-file-name-fg: $light_blue
+dialog-input-attach-file-size-fg: $light_blue_gray
+dialog-input-attach-doc-upload-bg: $white,30%
+dialog-input-attach-doc-upload-progress-bg: $base_color
+dialog-input-attach-doc-remove-bg: $text_field_base,30%
+dialog-input-attach-doc-remove-hover-bg: $text_field_base,45%
+dialog-input-attach-doc-icon: $base_color
+dialog-input-attach-audio-dur-fg: $light_gray
+dialog-input-attach-fwd-line-bg: $border
+dialog-input-attach-progress-wrap-bg: $black,15%
+dialog-input-attach-image-bg: $text_field
+dialog-input-attach-audio-hover-bg: $text_field
+dialog-input-attach-geo-remove-bg: $white,50%
+dialog-input-attach-geo-remove-hover-bg: $white,70%
+dialog-input-mentions-list-shadow: $black,5% // top shadow
+dialog-input-attach-border: $white,10%
+dialog-input-keyboard-default-bg: #394050
+dialog-input-keyboard-default-fg: $white,90%
+dialog-input-keyboard-default-border: #394050
+dialog-input-keyboard-negative-bg: #e76666
+dialog-input-keyboard-negative-fg: $white,90%
+dialog-input-keyboard-negative-border: #d45d5d
+dialog-input-keyboard-positive-bg: #63b963
+dialog-input-keyboard-positive-fg: $white,90%
+dialog-input-keyboard-positive-border: #63b963
+dialog-input-keyboard-primary-bg: #5181b8
+dialog-input-keyboard-primary-fg: $white,90%
+dialog-input-keyboard-primary-border: #5181b8
+dialog-header-back-badge-fg: $white
+dialog-header-back-badge-bg: $base_color
+dialog-typing-text-fg: $light_gray
+dialog-typing-point-icon: $light_gray
+dialog-typing-point-gray-icon: $light_gray
+dialog-messages-error-icon: $text_field
+dialog-messages-date-bg: $bg
+dialog-messages-date-fg: $text_color
+dialog-messages-date-shadow: transparent
+#if MACOS
+  dialog-messages-date-border: $text_field
+#endif
+dialog-messages-load-error-big-title-fg: #98ACC2
+dialog-messages-new-line-bg: #3a4051
+dialog-history-end-button-shadow: $bg,20%
+dialog-history-end-button-border: $bg,20%
+dialog-history-end-button-hover-border: $bg,20%
+dialog-history-end-button-bg: $bg,50%
+dialog-history-end-button-hover-bg: $bg
+dialog-history-end-button-badge-bg: $base_color
+dialog-history-end-button-badge-fg: #1F2333
+dialog-history-end-button-icon: $base_color
+dialog-history-end-button-icon-hover: $base_color,80%
+dialog-search-message-arrow-icon: #98ACC2
+dialog-message-unread-bg: #2c3242
+dialog-message-hover-bg: #1A1E2B
+dialog-message-photo-bg: #1A1E2B
+dialog-message-gift-bg: #1F2333
+dialog-message-gift-time-fg: #647081
+dialog-message-gift-text-fg: #fff
+dialog-message-selected-bg: #2c3242
+dialog-message-gift-selected-bg: #2c3242
+dialog-message-select-icon: rgba(166, 180, 200, 0.25)
+dialog-message-select-hover-icon: rgba(166, 180, 200, 0.35)
+dialog-message-selected-select-icon: $base_color
+dialog-message-gift-select-icon: rgba(166, 180, 200, 0.25)
+dialog-message-gift-selected-select-icon: #70A7F0
+dialog-forwarded-line: #3a4051
+attach-upload-progress-cancel-bg: rgba(255, 255, 255, 0.1)
+attach-upload-progress-retry-bg: rgba(255, 255, 255, 0.5)
+attach-upload-progress-cancel-icon: rgba(255, 255, 255, 0.7)
+attach-upload-progress-cancel-icon-hover: #fff
+attach-photo-bg: #1F2333
+attach-photo-upload-progress-bg: rgba(0, 0, 0, 0.15)
+attach-photo-upload-cancel-icon: rgba(255, 255, 255, 0.5)
+attach-doc-bg: #1A1E2B
+attach-doc-loader-bg: rgba(0, 0, 0, 0.5)
+attach-doc-image-info-fg: #fff
+attach-doc-image-info-bg: rgba(0, 0, 0, 0.4)
+attach-doc-image-gift-mark-fg: #fff
+attach-doc-image-gift-mark-bg: rgba(0, 0, 0, 0.4)
+attach-doc-image-upload-progress-bg: rgba(0, 0, 0, 0.15)
+attach-doc-title-fg: #fff
+attach-doc-title-bg: rgba(0, 0, 0, 0.4)
+attach-doc-file-upload-bg: rgba(255, 255, 255, 0.3)
+attach-doc-file-upload-progress-bg: #70A7F0
+attach-doc-audio-upload-progress-bg: #70A7F0
+attach-link-border: #3a4051
+attach-link-text-fg: #647081
+attach-link-image-border: rgba(0, 0, 0, 0.12)
+attach-url-rounded-fg: #fff
+attach-wall-border: #3a4051
+attach-audio-play-icon-bg: $base_color
+attach-audio-play-icon-fg: #fff
+attach-audio-hover-bg: #1A1E2B
+attach-audio-unreadmessage-hover-bg: rgba(26, 30, 43, 0.5)
+attach-audio-bar-full-bg: rgba(255, 255, 255, 0.3)
+attach-audio-unreadmessage-bar-full-bg: rgba(255, 255, 255, 0.3)
+attach-audio-bar-buffered-bg: rgba(112, 167, 240, 0.5)
+attach-audio-unreadmessage-bar-buffered-bg: rgba(112, 167, 240, 0.5)
+attach-audio-bar-progress-bg: $base_color
+attach-audio-bar-slider-bg: $base_color
+attach-video-play-icon: #fff
+attach-video-dur-fg: #fff
+attach-video-dur-bg: rgba(0, 0, 0, 0.4)
+attach-snapster-over-label-fg: #fff
+attach-money-transfer-from-fg: #647081
+attach-money-transfer-left-rub-border: rgba(0, 0, 0, 0.06)
+attach-market-border: rgba(0, 0, 0, 0.15)
+attach-market-desc-fg: #647081
+attach-poll-answer-bg: rgba(125, 145, 166, 0.1)
+attach-poll-answer-hover-bg: rgba(125, 145, 166, 0.16)
+attach-poll-answer-count-fg: rgba(255, 255, 255, 0.6)
+attach-poll-gradient-answer-bg: rgba(255, 255, 255, 0.12)
+attach-poll-gradient-answer-hover-bg: rgba(255, 255, 255, 0.2)
+attach-poll-gradient-checkbox-border: #fff
+attach-answered-poll-answer-rate-bg: #70A7F0
+attach-answered-poll-gradient-answer-rate-bg: rgba(255, 255, 255, 0.28)
+attach-answered-poll-my-answer-fg: #fff
+attach-answered-poll-gradient-my-answer-fg: #fff
+attach-album-name-textshadow: rgba(0, 0, 0, 0.25)
+attach-album-author-textshadow: rgba(0, 0, 0, 0.2)
+attach-album-name-fg: #fff
+attach-album-author-fg: #fff
+attach-playlist-default-cover-fg: #70A7F0
+attach-playlist-default-cover-bg: #3a4051
+attach-playlist-head-info-button-fg: #fff
+attach-playlist-showall-hover-bg: #1A1E2B
+attach-playlist-play-icon: #fff
+attach-gift-image-shadow: rgba(0, 0, 0, 0.08)
+photos-result-border: #3a4051
+photos-photo-overlay-bg: #fff
+photos-selected-icon-fg: #70A7F0
+photos-selected-icon-bg: #fff
+photos-webcam-icon-bg: #f74842
+photos-webcam-icon-fg: #fff
+photos-webcam-bg: #000
+photos-webcam-placeholder-bg: #000
+photos-webcam-placeholder-fg: #fff
+photos-webcam-timer-second-fg: #f74842
+photos-album-icon-bg: #3a4051
+photos-album-icon-fg: #70A7F0
+photos-album-icon-hover-bg: #3a4051
+docs-item-line-bg: #3a4051
+photos-new-webcam-btn-fg: #ffffff
+photos-new-webcam-btn-bg: $base_color,38%
+context-menu-item-fg: #fff
+context-menu-item-hover-bg: #1A1E2B
+context-menu-item-hover-fg: #fff
+context-menu-item-icon-hover-fg: #70A7F0
+context-menu-arrow-icon: #647081
+main-menu-section-fg: #969da2
+main-menu-update-icon-bg: #3a4051
+main-menu-update-icon-fg: #70A7F0
+popover-bg: #222325
+popover-shadow: rgba(0, 0, 0, 0.2)
+popover-shadow2: rgba(0, 0, 0, 0.24)
+calendar-bg: #1F2333
+calendar-shadow: rgba(0, 0, 0, 0.08)
+calendar-border: #3a4051
+calendar-dow-fg: #647081
+calendar-cell-selected-bg: #528ada
+calendar-cell-selected-fg: #fff
+compose-chat-icon-bg: #3a4051
+toast-link-fg: #916108
+toast-yellow-bg: #f7c360
+toast-yellow-fg: #fff
+toast-green-bg: #47be5b
+toast-green-fg: #fff
+toast-message-bg: #e4ebf5
+toast-message-fg: #67788a
+audioplayer-progress-full-bg: $base_color,30%
+audioplayer-progress-buffered-bg: $base_color,50%
+audioplayer-progress-value-bg: $base_color
+audioplayer-slider-bg: $base_color
+communities-icon: $base_color
+accpanel-bg: $base_acc_panel_and_frame
+accpanel-border-right: #394050
+accpanel-sep-border-bottom: rgba(255, 255, 255, 0.3)
+accpanel-cur-icon: $base_color
+accpanel-badge-fg: $white
+accpanel-badge-bg: $base_color
+accpanel-graybadge-bg: #9ea6ad
+accpanel-dimmed-bg: rgba(0, 0, 0, 0.15)
+accpanel-dimmed-badge-border: #cacccc
+accpanel-add-hover-bg: #98ACC2
+accpanel-add-hover-fg: rgba(255, 255, 255, 0.7)
+group-ban-user-status-fg: #647081
+chatlink-reset-bg: #3a4051
+chatlink-reset-fg: #fff
+dnd-border-color: #3a4051
+dnd-active-bg: #1A1E2B
+dnd-text: #818C99
+dnd-icon: #70A7F0
+initials-avatar-fg: #fff
+captcha-bg: #1F2333
+spinner-monochrome-bg: #1F2333
+spinner-fg: #aeb7c2
+toggle-bg: #3a4051
+toggle-slider-border: $base_color,30%
+toggle-slider-bg: $base_color
+toggle-enabled-bg: $base_color,47%
+toggle-enabled-slider-bg: $base_color
+radio-border: #3a4051
+radio-selected-border: $base_color,47%
+checkbox-border: #3a4051
+checkbox-bg: $base_color
+checkbox-fg: #000
+dropdown-items-border: #3a4051
+dropdown-shadow: rgba(0, 0, 0, 0.1)
+dropdown-item-hover-bg: #1A1E2B
+componentimage-bg: #1A1E2B
+login-title-fg: #fff
+login-footer-link-fg: rgba(255, 255, 255, 0.8)
+login-error-fg: #df4444
+login-input-bg: #3a4051
+login-input-fg: #fff
+login-input-placeholder: #7d8594
+login-input-focus-border: $base_color
+login-input-error-border: #df4444
+login-resend-timer-fg: #647081
+login-validate-button-fg: #fff
+login-icons: #70A7F0
+login-icons-hover: rgba(112, 167, 240, 0.7)
+settings-section-fg: $light_blue
+settings-profile-userpic-uploading-bg: $black,50%
+settings-profile-userpic-uploading-spinner-bg: $bg,25%
+settings-profile-userpic-uploading-spinner-fg: $white
+settings-separator-bg: $border
+settings-line-editing-bg: #2c3242 // 10% of $text_field_base
+settings-line-link-red-fg: #ff3a30
+settings-secondlevel-line-border: $border
+settings-notifications-community-badge-fg: $light_gray
+settings-buttonlight-hover-bg: $text_field
+settings-block-title-fg: #7e8081
+settings-scale-fg: $base_color
+settings-scale-bg: $text_field
+settings-scale-selected-bg: $base_color
+settings-scale-selected-fg: $white
+settings-error-bg: #541111
+settings-error-code-bg: rgba(0, 0, 0, 0.2)
+smiles-box-bg: $dark
+smiles-box-smile-hover-bg: $black,25%
+smiles-box-section-header-fg: $light_blue_gray
+smiles-box-tabs-border: $border
+calls-menu-beta-fg: $light_gray
+calls-menu-beta-hover-fg: $light_gray
+select-arrow-fg: $base_color
+work-dialogs-section-fg: $light_blue_gray
+nano-slider-bg: rgba(255, 255, 255, 0.15)
+nano-slider-hover-bg: rgba(255, 255, 255, 0.25)
+nano-slider-active-bg: rgba(255, 255, 255, 0.35)
+ripple: #00050a
